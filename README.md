@@ -9,6 +9,10 @@
 ❗Autor: Eu mesmo, Guilherme Paiva. Tive a ideia de pensar, planejar e desenvolver este projeto!
 (Eu desenvolvi o design e o protótipo usando a ferramenta Figma)
 
+As tecnologias usadas foram:
+HTML, CSS, JS, JQUERY, BOOTSTRAP e SASS
+(Foi implementado um pouco de cada tecnologia)
+
 <br>
 
 <div>
