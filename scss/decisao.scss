@@ -1,0 +1,182 @@
+.decision-bg {
+    display: flex;
+    visibility: hidden;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #131313d7;
+    opacity: 0;
+    transition: all 250ms ease-in-out;
+    padding: 10px;
+
+    &.open-decision-event {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .decision-box {
+        background-color: #fff;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 25px;
+        border-radius: 10px;
+        transform: translateY(-100px);
+        opacity: 0;
+        transition: all 250ms ease-in-out;
+
+        &.open-decision-box {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .decision-box-title {
+            font-size: 16px;
+            color: #4d4d4d;
+            letter-spacing: .7px;
+            font-weight: 500;
+        }
+
+        .box-btns {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            .button {
+                padding: 8px;
+                border-radius: 10px;
+                color: #fff;
+                text-align: center;
+                width: 100%;
+                text-decoration: none;
+                font-size: 15px;
+                letter-spacing: .9px;
+                transition: 250ms ease-in-out;
+                cursor: pointer;
+                background-color: $color-bg-secundary;
+                border: solid 2px $color-bg-secundary;
+
+                &:first-child:hover {
+                    transform: translateY(-5px);
+                }
+
+                &:last-child {
+                    background-color: transparent;
+                    color: $color-bg-secundary;
+
+
+                    &:hover {
+                        background-color: $color-bg-primary;
+                        border: solid 2px $color-bg-primary;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Modal
+.modal {
+    display: flex;
+    visibility: hidden;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1313138f;
+
+    &.modal-open {
+        visibility: visible;
+    }
+
+    .modal-container {
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        color: $color-letters;
+        transform: translateY(-50px);
+        transition: all 250ms ease-in-out;
+        font-size: 15px;
+        opacity: 0;
+        margin: 0 10px;
+
+        &.modal-animate {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .modal-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 0 15px 0;
+
+            p {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+
+                ion-icon {
+                    font-size: 22px;
+                    color: rgb(207, 90, 90);
+                }
+            }
+
+            .close-modal {
+                border: none;
+                color: rgb(207, 90, 90);
+                font-size: 28px;
+                border-radius: 4px;
+                cursor: pointer;
+            }
+        }
+
+        .modal-body {
+            border: solid 1px rgba(128, 128, 128, 0.26);
+            border-right: 0;
+            border-left: 0;
+            padding: 20px 0 20px 0;
+        }
+
+        p {
+            margin: 0;
+        }
+
+        .modal-footer {
+            display: flex;
+            justify-content: flex-end;
+            padding: 15px 0 0 0;
+
+            .btn-modal-warning {
+                border: 0;
+                padding: 7px 10px;
+                border-radius: 5px;
+                background-color: $color-bg-secundary;
+                color: #fff;
+                font-size: 14px;
+                cursor: pointer;
+                letter-spacing: .5px;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .decision-box-title {
+        text-align: center;
+    }
+}

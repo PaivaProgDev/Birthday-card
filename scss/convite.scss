@@ -1,0 +1,133 @@
+.card-bg {
+    display: flex;
+    visibility: hidden;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #131313d7;
+    opacity: 0;
+    transition: all 250ms ease-in-out;
+    padding: 10px;
+
+    &.open-invitation {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .card {
+        max-width: 800px;
+        width: 100%;
+        height: fit-content;
+        color: #fff;
+        background: radial-gradient($color-bg-primary, $color-bg-secundary);
+        border: none;
+        padding: 30px;
+        transform: translateY(-100px);
+        opacity: 0;
+        transition: all 250ms ease-in-out;
+        font-family: $font-envelope;
+
+        &.card-invitation {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .btn-close-card {
+            align-self: flex-end;
+            font-size: 30px;
+            cursor: pointer;
+        }
+
+        .close-invitation {
+            align-self: flex-end;
+            font-size: 30px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .header-card {
+            font-size: 29px;
+            width: 100%;
+            z-index: 1;
+
+            p {
+                margin: 0;
+                width: 100%;
+            }
+        }
+
+        .main-card {
+            z-index: 1;
+
+            .info-card {
+                width: 100%;
+                font-size: 15px;
+                margin: 0;
+                font-size: 17px;
+            }
+        }
+
+        .card-img {
+            width: 100%;
+            max-width: 250px;
+            transition: 300ms ease-in-out;
+        }
+
+        .footer-card {
+            z-index: 3;
+            width: 100%;
+
+            .btn-card {
+                background-color: #fff;
+                color: #3f3f3f;
+                font-size: 21px;
+                letter-spacing: .6px;
+                box-shadow: 0 -1px 10px .5px rgba(44, 44, 44, 0.397);
+                transition: 250ms ease-in-out;
+
+                &:hover {
+                    transform: translateY(4px);
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .card-img {
+        opacity: 0.2;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .card-bg {
+        .card {
+            padding: 25px;
+        }
+    }
+}
+
+@media screen and (max-width: 350px) {
+
+    .card-bg {
+        .card {
+            padding: 20px;
+        }
+    }
+
+    .header-card {
+        p {
+            font-size: 17px;
+        }
+    }
+
+    .btn-card {
+        width: 100%;
+    }
+}

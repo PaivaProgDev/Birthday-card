@@ -1,0 +1,198 @@
+.form-confirm-name {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #ebebeb;
+    visibility: hidden;
+
+    &.active-modal-input {
+        visibility: visible;
+    }
+}
+
+.form-body {
+    background-color: #ffffff;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+    max-width: 400px;
+    transform: translateY(-100px);
+    transition: 250ms ease-in-out;
+    opacity: 0;
+    margin: 0 20px;
+    box-shadow: 3px 4px 5px 1px rgba(62, 62, 62, 0.322);
+
+    &.active-modal-body-input {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    label {
+        display: none;
+    }
+
+    .warnings-box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        height: 100%;
+        min-height: 45px;
+        width: 100%;
+
+        .warning1 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #54e221;
+            position: absolute;
+            top: 100%;
+            transition: 250ms ease-in-out;
+
+            &.visibility-positive {
+                top: 12px;
+            }
+
+            span {
+                letter-spacing: .5px;
+                font-size: 13px;
+            }
+
+            ion-icon {
+                font-size: 20px;
+            }
+        }
+
+        .warning2 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+            color: rgba(255, 0, 0, 0.801);
+            font-size: 14px;
+            position: absolute;
+            top: 100px;
+            transition: 250ms ease-in-out;
+            opacity: 0.8;
+
+            &.visibility-negative {
+                top: 12px;
+            }
+
+            span {
+                letter-spacing: .5px;
+            }
+
+            ion-icon {
+                font-size: 20px;
+            }
+        }
+
+        .warning3 {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 12px;
+            color: rgba(255, 0, 0, 0.801);
+            font-size: 14px;
+            position: absolute;
+            top: 100%;
+            transition: 250ms ease-in-out;
+            opacity: 0.8;
+
+            &.visibility-insert {
+                top: 10px;
+            }
+
+            span {
+                letter-spacing: .5px;
+            }
+
+            ion-icon {
+                font-size: 25px;
+            }
+        }
+
+    }
+
+    .input-box {
+        padding: 12px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        border-bottom: solid .50px #4747474e;
+
+        .person-icon {
+            font-size: 25px;
+            color: $color-bg-secundary;
+        }
+
+        .input-name {
+            border: 0;
+            padding: 3px 8px;
+            font-size: 13px;
+            outline: transparent;
+        }
+    }
+
+    .btn-confirm {
+        width: 100%;
+        padding: 9px;
+        border: 0;
+        cursor: pointer;
+        text-align: center;
+        color: #fff;
+        background-color: $color-bg-primary;
+        z-index: 1;
+        border-radius: 0 0 10px 0;
+
+        &:disabled {
+            background-color: rgb(232, 232, 232);
+            cursor: default;
+        }
+
+        &:not(:disabled):hover {
+            background-color: #8c59de;
+        }
+    }
+
+    .btns-input-card {
+        display: flex;
+        width: 100%;
+        z-index: 1;
+
+        .verify-name {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3px 5px;
+            border-radius: 0 0 0 10px;
+            background: $color-bg-secundary;
+            color: #f3f3f3;
+            letter-spacing: .5px;
+            border: 0;
+            cursor: pointer;
+            width: 100%;
+
+            &:hover {
+                background-color: #6b25da;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 300px) {
+    .input-name {
+        width: 100%;
+    }
+}

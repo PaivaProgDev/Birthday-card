@@ -1,0 +1,108 @@
+.bg-prompt {
+    background-color: #ebebeb;
+    transition: 350ms ease-in-out;
+    transform: translateY(0);
+    padding: 10px;
+
+    &.prompt-close {
+        transform: translateY(100vh);
+        visibility: hidden;
+    }
+
+    .title-prompt {
+        color: $color-bg-secundary;
+        font-family: $font-envelope;
+    }
+
+    .warning-prompt1 {
+        color: #3b3b3ba1;
+        letter-spacing: .7px;
+        visibility: visible;
+        opacity: 1;
+        margin: 30px 10px 20px 10px;
+        text-align: center;
+
+        &.warning-prompt-open1 {
+            visibility: hidden;
+            opacity: 0;
+        }
+    }
+
+    .warning-prompt2 {
+        color: #3b3b3be2;
+        letter-spacing: .7px;
+        visibility: hidden;
+        opacity: 0;
+        transition: 250ms ease-in-out;
+
+        &.warning-prompt-open2 {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+}
+
+.prompt-body {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    box-shadow: 3px 4px 5px 1px rgba(62, 62, 62, 0.322);
+
+    .prompt-header {
+        background-color: $color-bg-secundary;
+        color: #fff;
+        letter-spacing: .5px;
+        padding: 5px 20px;
+        border-radius: 15px 15px 0 0;
+
+        span {
+            font-size: 14px;
+        }
+    }
+
+    .prompt-input {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        background-color: #fff;
+        padding: 20px;
+
+        span {
+            font-size: 15px;
+            color: rgb(59, 59, 59);
+        }
+
+        .input-name-main {
+            border: solid 1px rgba(128, 128, 128, 0.313);
+            padding: 4px 9px;
+            outline-color: $color-bg-secundary;
+            border-radius: 8px;
+            color: rgb(59, 59, 59);
+            font-size: 14px;
+        }
+    }
+
+    .prompt-button {
+        border: 0;
+        display: flex;
+        justify-content: center;
+        padding: 0 20px 20px 20px;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 0 0 15px 15px;
+
+        button {
+            padding: 8px 50px;
+            border: 0;
+            background-color: $color-bg-secundary;
+            color: #fff;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+    }
+}

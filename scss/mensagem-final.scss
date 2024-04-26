@@ -1,0 +1,45 @@
+// Mensagem de negação
+.bg-modal-negative {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    background: radial-gradient($color-bg-primary, $color-bg-secundary);
+    text-align: center;
+    padding: 10px;
+}
+
+.negative-title {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 17px;
+    color: #4d4d4d;
+    letter-spacing: .7px;
+    font-weight: 400;
+    margin: 0;
+}
+
+// Mensagem de aceitação
+.bg-modal-positive {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    background: radial-gradient($color-bg-primary, $color-bg-secundary);
+    text-align: center;
+    padding: 10px;
+}
+
+.confirmed-title {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 17px;
+    color: #4d4d4d;
+    letter-spacing: .7px;
+    margin: 0;
+    font-weight: 400;
+}
